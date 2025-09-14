@@ -1,0 +1,179 @@
+
+.filters {
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 60%;           
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 38px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  background: #ff6600;
+  color: #fff;
+  border-color: #ff6600;
+}
+
+
+.filters-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;           
+  flex-wrap: nowrap;   
+}
+
+.active-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;  
+}
+
+
+.filters-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.pill-btn {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+.pill-btn.active {
+  background: #f5f5f5;
+}
+
+
+.veg-icon {
+  width: 14px;
+  height: 14px;
+  border: 2px solid black;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.veg-icon::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.nonveg-icon {
+  width: 14px;
+  height: 14px;
+  border: 2px solid black;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nonveg-icon::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+
+
+@media (max-width: 1024px) {
+  .search-wrapper {
+    width: 80%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-wrapper {
+    width: 85%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-wrapper {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .filters-row {
+    flex-wrap: nowrap;   
+    gap: 15px;           
+  }
+
+  .active-text {
+    font-size: 13px;
+  }
+
+  .tab-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .pill-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

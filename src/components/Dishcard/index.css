@@ -1,0 +1,164 @@
+.dish-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 16px;
+  transition: transform 0.2s;
+  margin-bottom: 16px;
+}
+
+.dish-info {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.dish-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.dish-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.dish-type {
+  width: 14px;
+  height: 14px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.dish-type.veg::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.dish-type.nonveg::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.dish-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.readmore {
+  color:black;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.ingredient-btn {
+  border: none;
+  background: transparent;
+  color: #ff6600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.dish-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dish-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.add-btn,
+.remove-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-btn {
+  background: #e8f7ed;
+  color: green;
+}
+
+.add-btn:hover {
+  background: #d4f0dd;
+}
+
+.remove-btn {
+  background: #ffeaea;
+  color: black;
+}
+
+.remove-btn:hover {
+  background: #ffdddd;
+}
+
+
+@media (max-width: 768px) {
+  .dish-card {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 95%;
+    padding: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  }
+
+  .dish-info {
+    margin-right: 12px;
+    flex: 1;
+  }
+
+  .dish-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .dish-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .add-btn,
+  .remove-btn {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+
+  .ingredient-btn {
+    font-size: 13px;
+  }
+
+  .dish-desc {
+    font-size: 13px;
+  }
+}
